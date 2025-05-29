@@ -42,14 +42,14 @@ public class Coelho extends Animal
     /**
      * Isto é o que o coelho faz na maior parte do tempo: ele corre por aí.
      * Às vezes, ele se reproduz ou morre de velhice.
-     * @param novosCoelhos Uma lista para retornar os coelhos recém-nascidos.
+     * @param atores Uma lista para retornar os coelhos recém-nascidos.
      */
     @Override
-    public void agir(List<Animal> novosCoelhos)
+    public void agir(List<Ator> atores)
     {
         incrementarIdade();
         if(estaVivo()) {
-            reproduzir(novosCoelhos);            
+            reproduzir(atores);            
             // Tenta se mover para uma localização livre.
             Localizacao novaLocalizacao = obterCampo().localizacaoVizinhaLivre(obterLocalizacao());
             if(novaLocalizacao != null) {
