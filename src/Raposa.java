@@ -63,15 +63,15 @@ public class Raposa extends Animal
      * Isto é o que a raposa faz na maior parte do tempo: ela caça coelhos.
      * Durante o processo, ela pode se reproduzir, morrer de fome
      * ou morrer de velhice.
-     * @param novasRaposas Uma lista para retornar as raposas recém-nascidas.
+     * @param atores Uma lista para retornar as raposas recém-nascidas.
      */
     @Override
-    public void agir(List<Animal> novasRaposas)
+    public void agir(List<Ator> atores)
     {
         incrementarIdade();
         incrementarFome();
         if(estaVivo()) {
-            reproduzir(novasRaposas);            
+            reproduzir(atores);            
             // Move-se em direção a uma fonte de comida, se encontrada.
             Localizacao novaLocalizacao = buscarComida();
             if(novaLocalizacao == null) { 
